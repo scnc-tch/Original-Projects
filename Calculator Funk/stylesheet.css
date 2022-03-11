@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: sans-serif;
+    font-style:normal;
+}
+.calculator{
+    display: block;
+}
+.calculator-div{
+    display: grid;
+    grid-template-areas:
+    'input input'
+    '79 operations'
+    '46 operations'
+    '13 operations'
+    'dot operations';
+    max-width: fit-content;
+    margin: 0 auto;
+    margin-top: 3em;
+    gap: 0.2em;
+    border-width: .3rem;
+    border-style: solid;
+    background-color: bisque;
+    border-color: burlywood;
+}
+
+.input{
+    grid-area: input;
+    margin: 0.2em;
+    max-width: 100%;
+    text-align: right;
+    padding: 0.2em;
+    background-color: lightslategray;
+    border-radius: 5%;
+}
+.operations-div{
+    display: flex;
+    flex-direction: column;
+    grid-area: operations;
+    gap: 0.2em;
+    padding-right: 0.2em;
+}
+
+.operations--button{
+    background-color: lightgreen;
+}
+.number--button{
+    width: 3.25em;
+    height: 3.25em;
+    background-color: lightblue;
+}
+
+.clear-bttn{
+    background-color: lightcoral;
+}
+
+.numbers7-9{
+    grid-area: 79;
+    margin-bottom: 0.2em;
+    padding-left: 0.2em;
+}
+
+.numbers4-6{
+    grid-area: 46;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    padding-left: 0.2em;
+}
+
+.numbers1-3{
+    grid-area: 13;
+    margin-top: 0.2em;
+    padding-left: 0.2em;
+
+}
+.numbers0-dot{
+    grid-area: dot;
+    margin-top: 0.2em;
+    padding-left: 0.2em;
+   }
+
+.number--button{
+    width: 2.39em;
+    height: 2.39em;
+    background-color: lightblue;
+}
+
