@@ -12,6 +12,10 @@ body{
 .calculator{
     display: block;
 }
+
+.input{
+    height: 1.5em;
+}
 .calculator-div{
     display: grid;
     grid-template-areas:

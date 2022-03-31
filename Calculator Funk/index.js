@@ -37,37 +37,53 @@ let erase = document.getElementById("clearBttn")
 let plus = document.getElementById("plusBttn")
     plus.addEventListener("click", function(num1, num2){
        setFirstNumber()
+       operation = "add"
+       console.log (operation)
     })
-
 
 let minus = document.getElementById("minusBttn")
     minus.addEventListener("click", function(){
         setFirstNumber()
+        operation = "subtract"
     })
 
 let multiply = document.getElementById("timesBttn")
     multiply.addEventListener("click", function(){
         setFirstNumber()
+        operation = "multiply"
     })
 
 let divide = document.getElementById("divisionBttn")
     divide.addEventListener("click", function(){
         setFirstNumber()
+        operation = "divide"
     })
-
 
 let equals = document.getElementById("equalsBttn")
     equals.addEventListener("click", function(){
         setSecondNumber()
         num1 = parseInt(localStorage.numeric1)
         num2 = parseInt(localStorage.numeric2)
-         let result = num1 + num2 
-         console.log(result)
-         viewField.textContent = result
-       
+            if(operation === "add"){
+                let result = num1 +num2
+                viewField.textContent = result
+                console.log(result)
+            }else if(operation === "subtract"){
+                let result = num1  - num2
+                viewField.textContent = result
+                console.log(result)
+            } else if(operation === "multiply"){
+                let result = num1 * num2
+                viewField.textContent = result
+                console.log(result)
+            } else if(operation === "divide"){
+                let result = num1 / num2
+                viewField.textContent = result
+                console.log(result)
+            }
     })
 
-    
+
  // 3.0 Numbers ******************
 
 let one = document.getElementById("oneBttn")
@@ -131,5 +147,9 @@ let zero = document.getElementById("zeroBttn")
         number += 0
     })
 
-
+let decimal = document.getElementById("decimalBttn")
+    zero.addEventListener('click', function(){
+        viewField.textContent += "."
+        number += "."
+    })
 
